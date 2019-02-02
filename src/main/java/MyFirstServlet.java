@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(description = "My First Servlet", urlPatterns = { "/FirstServlet", "/FirstServlet.do" }, initParams = { @WebInitParam(name = "id", value = "1"),
+@WebServlet(description = "My First Servlet", urlPatterns = { "/MyFirstServlet", "/MyFirstServlet.do" }, initParams = { @WebInitParam(name = "id", value = "1"),
            @WebInitParam(name = "name", value = "dobransk")
 })
 public class MyFirstServlet extends HttpServlet
@@ -23,7 +23,7 @@ public class MyFirstServlet extends HttpServlet
         super();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
         PrintWriter out = response.getWriter();
         Date date = new Date();
