@@ -7,6 +7,34 @@
     <groupId>servlet.examples</groupId>
     <artifactId>servlet</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>ui-base</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>war</goal>
+                        </goals>
+                        <configuration>
+                            <warName>servletexample</warName>
+                            <webResources>
+                                <resource>
+                                    <directory>src/main/resources/web_content/web</directory>
+                                </resource>
+                            </webResources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
     <dependencies>
         <dependency>
             <groupId>org.apache.openejb</groupId>
